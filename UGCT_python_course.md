@@ -7,6 +7,8 @@ Let us start first from python installation.
 ## Python installation
 Here I assume most of you have a windows system, if you have a linux or Mac python would already be installed. For windows user, please visit the [link](https://www.python.org/downloads/) Choose the latest version or any version (preferable above 3.4) as you prefer and download the executible (.exe) file. Once the file has been downloaded, open and follow the instruction to install python. It is quite straight forward. Once python is installed you will see an app call "IDLE" in your desktop or the "Start". The IDLE is basically your python virtual terminal where the python program that you write will be executed. However, one can also run in the terminal in command prompt but let us not go there and comlicate things. So if you like next to ">>" sign you can type "print ("Hellow world")" and see the output below. Does python print Hello world in blue. Congratulations you wrote your first script. In order to carry out our image processing we require additional functions called modules. Therefore these modules are separately installed from the terminal (command promt) which is described in the next section.
 
+Note: There are many other way one can use python in windows, other platforms include [Jypyter notebook](https://jupyter.org/), [anaconda](https://www.anaconda.com/products/individual), [Ipython](https://ipython.org/) and so on. However, we use simple one such as IDlE or terminal approach for this course. If you are interested feel free to use other platforms of python.
+
 ## Module installation
 The list of modules needed for our course are listed below;
 - Matplotlib.py
@@ -39,10 +41,16 @@ Although this is optional, but it can be good to have some quick feedback. Go to
 ## Description about different python modules
 
 #### Matplotlib
+It is one of the many plotting tool used in python and probably one of the oldest. In this course we will use this library, however if you know of other plotting libraries feel free to use them. We will use the plot function "matplotlib.pyplot" for all our plotting. The documentation for matplotlib can be found [here](https://matplotlib.org/).
 
 #### numpy
+Numpy is a python function used for handling arrays and data sets. It is quite helpful in handling 2D and 3D images in the form of arrays. Documentation for numpy can be found [here](https://numpy.org/doc/stable/).
+
 #### os 
+os refers to operating system. This module is needed to direct the python to a particular folder or location in your computer. The documentation is [here](https://docs.python.org/3/library/os.html).
+
 #### sys
+
 #### cv2/opencv
 #### porespy
 
