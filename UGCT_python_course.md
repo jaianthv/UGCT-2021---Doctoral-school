@@ -5,13 +5,47 @@ Welcome to the course page for python data analysis for UGCT - Doctoral school 2
 Let us start first from python installation.
 
 ## Python installation
-Here I assume most of you have a windows system, if you have a linux or Mac python would already be installed. For windows user, please visit the link [a link](https://www.python.org/downloads/) Choose the latest version or any version (preferable above 3.4) as you prefer and download the executible (.exe) file. Once the file has been downloaded, open and follow the instruction to install python. It is quite straight forward. Once python is installed you will see an app call "IDLE" in your desktop or the "Start". The IDLE is basically your python virtual terminal where the python program that you write will be executed. However, one can also run in the terminal in command prompt but let us not go there and comlicate things. So if you like next to ">>" sign you can type "print ("Hellow world")" and see the output below. Does python print Hello world in blue. Congratulations you wrote your first script. 
+Here I assume most of you have a windows system, if you have a linux or Mac python would already be installed. For windows user, please visit the [link](https://www.python.org/downloads/) Choose the latest version or any version (preferable above 3.4) as you prefer and download the executible (.exe) file. Once the file has been downloaded, open and follow the instruction to install python. It is quite straight forward. Once python is installed you will see an app call "IDLE" in your desktop or the "Start". The IDLE is basically your python virtual terminal where the python program that you write will be executed. However, one can also run in the terminal in command prompt but let us not go there and comlicate things. So if you like next to ">>" sign you can type "print ("Hellow world")" and see the output below. Does python print Hello world in blue. Congratulations you wrote your first script. In order to carry out our image processing we require additional functions called modules. Therefore these modules are separately installed from the terminal (command promt) which is described in the next section.
 
 ## Module installation
+The list of modules needed for our course are listed below;
+- Matplotlib.py
+- numpy
+- os
+- sys
+- opencv
+- porespy
+
+Go to command prompt in your windows system. Then type the following one at a time;
+
+1. pip install matplotlib.py  - press enter ---> wait until the installation is complete, then go to the next point 
+2. pip install numpy          - press enter ---> wait until the installation is complete, then go to the next point
+3. pip install os             - press enter ---> wait
+4. pip install sys            - press enter ---> wait
+5. pip install cv2            - press enter ---> wait
+6. pip install porespy        - press enter ---> wait
+
+Phew!!! Finally it is done but still some more to install. A description of each module and its purpose will be explained after all the installations are over.
+
 
 ## Paraview installation
+Paraview is an interactive 3D visualization, one can combine it python and it can be very efficient. However, in this course we will use it as a graphical user interface. 
+You can download the software from the [link](https://www.paraview.org/download/), choose the .exe file after you scroll down under "get the software". Follow the instructions and complete is installation.
 
 ## ImageJ installation
+Although this is optional, but it can be good to have some quick feedback. Go to this [link](https://imagej.net/software/fiji/). Dowload the .zip file, extract and you are done. A plugin suitable for 3D analysis is MorphoLibJ under the plugin IJPB.
+
+
+## Description about different python modules
+
+#### Matplotlib
+
+#### numpy
+#### os 
+#### sys
+#### cv2/opencv
+#### porespy
+
 
 ## Data analysis
 
