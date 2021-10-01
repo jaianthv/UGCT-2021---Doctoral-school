@@ -51,7 +51,11 @@ os refers to operating system. This module is needed to direct the python to a p
 
 #### sys
 
+sys module provides the possibility to send arguments in the commandline as you execute your python script. We may not be using this during the course, but is something good to know. You can check the [documentation](https://docs.python.org/3/library/sys.html) to know more about it.
+
 #### cv2/opencv
+This is an important module, which people use of image processing. It is one of the important module in image processing and we will a lot of function from this module during the course. It is something you may want to study/read through yourself if you want to make use of this module to process your images. It have good a good documentation and this [link](https://learnopencv.com/) has many examples explaining almost all the functions available in the module. The OpenCV documentation can be found [here](https://docs.opencv.org/4.5.3/).
+
 #### porespy
 
 
