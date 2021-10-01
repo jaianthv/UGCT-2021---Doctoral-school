@@ -1,6 +1,6 @@
-# Python data analysis 
+# Python - Data analysis and 3D rendering
 
-
+Welcome to the course page for python data analysis for UGCT - Doctoral school 2021 on "Introduction to Micro computer tomography". This course is suitable for everyone with prerequisite on python needed. All you need is your interest and motivation. The advatange of using python or anyother open soure software is that you can use it today, tomorrow till the end of time. You can not relying on any software lincense or its expiration date and that is also my motivation to go full opensource. In this practical session, we will learn how to handle reconstructed tomography images from UGCT. The images are typically generated as ".tiff" or ".tif" files/format. Tipically they are about 1000 of them with a total size ranging from 5 Gb to 10 Gb depending on the size of your sample. Hence, handling can be tricky when you dont have a computer with GPU for example. However, there are some tricks you can use such as splitting up of your data or looping over all imagesso you dont load all the images in your memory. We will will learn such tricks and techniques during this course . 
 
 ## Python installation
 
