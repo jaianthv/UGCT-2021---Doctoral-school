@@ -62,9 +62,15 @@ While Opencv can do most of the image processing, it is more suitable for 2D ima
 
 ## Let the coding begin
 
-
+We will firat do some small python programs so you get used to coding.
 
 ### Load image
+```
+import numpy
+import cv2 as cv
+import matplotlib.pyplot as plt
+
+```
 ### Open image in python
 ### Grey value thresholding 
 ### Conversion to binary
