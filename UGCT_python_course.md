@@ -147,14 +147,19 @@ def seperate_regions(input_image, I_min, I_max, show_img):
     return temp
 ```
 
-### Conversion to binary
+Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
+
+
+
+## Introduction to Porespy
+### Finding local thickness
+
 ### Exporting and saving
 
 
 ### looping over a folder
 
-## Introduction to Porespy
-### Finding local thickness
+
 
 ## Exercise 1: Choose your data set
 
