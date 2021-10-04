@@ -91,7 +91,7 @@ cv.destroyAllWindows()
 
 ```
 
-Did it work, were you able to see the image? One disadvantage of using the "cv.imshow" function is that you cannot adjust the grey scale value to be displayed or it has a scale bar to see the pixel values. So to be able to view those, we use matplotlib function as below. 
+Did it work, were you able to see the image? One disadvantage of using the `cv.imshow` function is that you cannot adjust the grey scale value to be displayed or it has a scale bar to see the pixel values. So to be able to view those, we use matplotlib function as below. 
 
 ```
 plt.matshow(Type your image name)
@@ -101,12 +101,20 @@ plt.show()
 Then run the script, how does the image appear?? Here you can zoom in place the mouse on top of your pixel of interest and know what value it has. 
 
 *Exercise 1* <br>
-While loading the image you used the syntax "cv.imread(filename,-1)" what does the "-1" corresponds to? How about you try entering "0" and "1" and how does the image change? Can you use any other value?? Don't google your answer immediately :)
+While loading the image you used the syntax `cv.imread(filename,-1)` what does the "-1" corresponds to? How about you try entering "0" and "1" and how does the image change? Can you use any other value?? Don't google your answer immediately :) <br>
+Alright, let us do some operation on the image. 
 
 
 ### Grey value thresholding 
+Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thre
+
+
+
+
 ### Conversion to binary
 ### Exporting and saving
+
+
 ### looping over a folder
 
 ## Introduction to Porespy
