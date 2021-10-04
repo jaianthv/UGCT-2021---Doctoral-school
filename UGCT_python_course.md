@@ -62,7 +62,7 @@ While Opencv can do most of the image processing, it is more suitable for 2D ima
 
 ## Let the coding begin
 
-We will firat do some small python programs so you get used to coding.
+We will firat do some small python programs so you get used to coding. In idle, go to top corner "File" and press "New file". A new window will appear, here is where you are going to write your python script. Let start by first loading the image.
 
 ### Load image
 ```
@@ -70,8 +70,35 @@ import numpy
 import cv2 as cv
 import matplotlib.pyplot as plt
 
+folder="Enter/folder/path"
+os.chdir(folder)
+filename = "xxx.tif"
+image = cv.imread(filename,-1)
+print ("Image successfully read")
 ```
+After this, press ctrl+s to save, give a name to your file. By default it will save as .py as ending. So you can just give a name here. Once saved, press F5 to run the script. Or you can go to "Run" on the top and press "Run Module". Was the script executed without any error, did the program print "Image successfully read"?? Then all is good.
+
 ### Open image in python
+Your image is loaded in the script, now let us take a look at it. There are two ways you can view your image let us try first by using opencv function. In the same program. start a new line. Write the following.
+
+```
+# in the line below - give a fancy name to the "window name" and enter the name you have given to your image
+
+cv.imshow('Window name',your image variable)
+# the line below will wait until you press escape after which it will close the image window
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+```
+
+Did it work, were you able to see the image? One disadvantage of using the "cv.imshow" function is that you cannot adjust the grey scale value to be displayed or it has a scale bar to see the pixel values. So to be able to view those, we use matplotlib function as below. 
+
+```
+
+
+```
+
+
 ### Grey value thresholding 
 ### Conversion to binary
 ### Exporting and saving
