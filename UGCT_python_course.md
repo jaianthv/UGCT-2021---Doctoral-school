@@ -106,10 +106,35 @@ Alright, let us do some operation on the image.
 
 
 ### Grey value thresholding 
-Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thre
+Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
 
+```
+cv.threshold(Inner_layer,Limit,1,cv.THRESH_BINARY+cv.THRESH_OTSU)
 
+```
 
+```
+def seperate_regions(masked_img, I_min, I_max, show_img):
+    
+    x = (cv.findNonZero(masked_img))
+    x = np.array(x)
+    #print (x)
+    temp = masked_img
+   
+    for i in range(0,len(x)):
+        coordinate_temp = x[i]
+        coordinate_x = coordinate_temp[0][0]
+        coordinate_y = coordinate_temp[0][1]
+        if temp[coordinate_y][coordinate_x] >= I_min and temp[coordinate_y][coordinate_x] <= I_max:   #33788 - 38000 #38000 - 70000
+           temp[coordinate_y][coordinate_x] = 1
+        else:
+           temp[coordinate_y][coordinate_x] = 0
+        coordinate =[]
+    if show_img == 1:
+       plt.matshow(temp)
+       plt.show()
+
+```
 
 ### Conversion to binary
 ### Exporting and saving
