@@ -146,7 +146,8 @@ def seperate_regions(input_image, I_min, I_max, show_img):
        
     return temp
 ```
-
+*Exercise 2* <br>
+Copy the function in your python script and you need to write one more line in order to execute this function.
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
 
