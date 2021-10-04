@@ -109,23 +109,33 @@ Alright, let us do some operation on the image.
 Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
 
 ```
-cv.threshold(Inner_layer,Limit,1,cv.THRESH_BINARY+cv.THRESH_OTSU)
+cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU)
 
 ```
+This code typically functions as the following <br>
+```
+if pixel value < Limit
+   set pixel value to set_to_value
+else 
+   set pixel value to zero
 
 ```
-def seperate_regions(masked_img, I_min, I_max, show_img):
+Imagine you have a pixel range of 0 - 100, and you want to separate or segment the pixels from 50 - 75, then this function cannot be used. There might be other possibilities but let us do it in the hard way. Let us write this operation as a python function.
+
+
+```
+def seperate_regions(input_image, I_min, I_max, show_img):
     
-    x = (cv.findNonZero(masked_img))
+    x = (cv.findNonZero(input_image))
     x = np.array(x)
     #print (x)
-    temp = masked_img
+    temp = input_image
    
     for i in range(0,len(x)):
         coordinate_temp = x[i]
         coordinate_x = coordinate_temp[0][0]
         coordinate_y = coordinate_temp[0][1]
-        if temp[coordinate_y][coordinate_x] >= I_min and temp[coordinate_y][coordinate_x] <= I_max:   #33788 - 38000 #38000 - 70000
+        if temp[coordinate_y][coordinate_x] >= I_min and temp[coordinate_y][coordinate_x] <= I_max:   
            temp[coordinate_y][coordinate_x] = 1
         else:
            temp[coordinate_y][coordinate_x] = 0
@@ -133,7 +143,8 @@ def seperate_regions(masked_img, I_min, I_max, show_img):
     if show_img == 1:
        plt.matshow(temp)
        plt.show()
-
+       
+    return temp
 ```
 
 ### Conversion to binary
