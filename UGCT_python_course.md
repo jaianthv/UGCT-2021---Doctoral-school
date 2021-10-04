@@ -100,7 +100,7 @@ plt.show()
 ```
 Then run the script, how does the image appear?? Here you can zoom in place the mouse on top of your pixel of interest and know what value it has. 
 
-*Exercise 1*
+*Exercise 1* <br>
 While loading the image you used the syntax "cv.imread(filename,-1)" what does the "-1" corresponds to? How about you try entering "0" and "1" and how does the image change? Can you use any other value?? Don't google your answer immediately :)
 
 
