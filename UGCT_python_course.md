@@ -147,13 +147,19 @@ def seperate_regions(input_image, I_min, I_max, show_img):
     return temp
 ```
 *Exercise 2* <br>
-Copy the function in your python script and you need to write one more line in order to execute this function.
+Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
 
 
 ## Introduction to Porespy
+Porespy is one of the python module used for pore analysis. It has one of the active repository and have many functions suitable for analyzing pores data. During this course we use it to analyze the local thickness of the tomography images.
+
 ### Finding local thickness
+
+[1] Hildebrand, T. and Rüegsegger, P., 1997. A new method for the model‐independent assessment of thickness in three‐dimensional images. Journal of microscopy, 185(1), pp.67-75.
+
+
 
 ### Exporting and saving
 
