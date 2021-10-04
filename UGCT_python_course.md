@@ -94,9 +94,14 @@ cv.destroyAllWindows()
 Did it work, were you able to see the image? One disadvantage of using the "cv.imshow" function is that you cannot adjust the grey scale value to be displayed or it has a scale bar to see the pixel values. So to be able to view those, we use matplotlib function as below. 
 
 ```
-
+plt.matshow(Type your image name)
+plt.show()
 
 ```
+Then run the script, how does the image appear?? Here you can zoom in place the mouse on top of your pixel of interest and know what value it has. 
+
+*Exercise 1*
+While loading the image you used the syntax "cv.imread(filename,-1)" what does the "-1" corresponds to? How about you try entering "0" and "1" and how does the image change? Can you use any other value?? Don't google your answer immediately :)
 
 
 ### Grey value thresholding 
