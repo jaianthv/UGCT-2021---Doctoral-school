@@ -161,11 +161,15 @@ Also known as Gaussian blur, approxiate each pixel into a Gaussian function. It 
 One can carry out the Gaussian blur using `cv.filter2D` function as carried out before. However opencv has a seperate Gaussian blur function as `cv.gaussianblur`. The syntax is given as `cv.GaussianBlur(image_name, (i, i), 0)` where "i,i" is the kernel size if it is a 3 x 3 matrix or 5 x 5 matrix and so on. Let us see what the Gaussian blur can do.
 
 
+*Exercise 3*<br>
+How about we try doing gaussian blur with 3x3, 5x5 and 10x10 kernel?? What to do you see?<br>
+
+List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d86/group__imgproc__filter.html)
 
 
 
-#### Median fileter
 #### FFT filtering
+
 
 
 ### Edge detection
