@@ -170,6 +170,7 @@ List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d8
 
 #### FFT filtering
 
+Fast Fourier transform is one of the important algorithm in image processing. Foruier transform of an image converts your image in a frequency space. One can make your image blurry by removing the high frequency signal and can make the image sharper by removing the low frequency signals. This approach can also be used to smooth and sharpen the image, however the use of FFT on images is broad.
 
 
 ### Edge detection
