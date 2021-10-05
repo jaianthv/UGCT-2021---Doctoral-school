@@ -105,6 +105,36 @@ While loading the image you used the syntax `cv.imread(filename,-1)` what does t
 Alright, let us do some operation on the image. 
 
 
+
+### Noise filtering
+#### Gaussian Filtering
+#### Median fileter
+#### FFT filtering
+
+
+### Edge detection
+#### Canny
+#### Other- Sobel and Laplacian
+
+
+### Erosion/dilation
+
+
+
+### Image registration 
+#### Hyperspy 
+
+### Segmentation
+
+#### Grey value thresholding
+#### Contour based
+
+
+
+
+
+
+
 ### Grey value thresholding 
 Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
 
