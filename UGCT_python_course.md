@@ -105,9 +105,52 @@ While loading the image you used the syntax `cv.imread(filename,-1)` what does t
 Alright, let us do some operation on the image. 
 
 
+### Kernel operation
+
+Kernel operation is nothing but carrying out elementwise matrix mutiplication or convolution on your image pixels. <br>
+Covolution = [[a,b,c] [d,e,f] [g,h,i]] (x) [[1,2,3] [4,5,6] [7,8,9]] = a.1 + b.2 + c.3 + d.4 + e.5 + f.6 + g.7 + h.8
+
+For example you can define a kernel as a 3 x 3 matrix such as; <br>
+
+0  -1  0 <br>
+-1  4  -1 <br>
+0  -1  0 <br>
+
+and operate this on each pixel of your image, the output of operation is your processed image. Let use see what this kernel can do.
+
+To carry out a kernel operation you can use `cv.filter2D` function. Example is [here](https://learnopencv.com/image-filtering-using-convolution-in-opencv/). Let us try.
+
+```
+
+# create a kernel
+
+kernel_1 = np.array( [[0, -1, 0], 
+                    [-1, 4, -1],
+                    [0, -1, 0]] )
+                    
+new_image = cv.filter2D(src=image, ddepth=-1, kernel=kernel_1)
+
+# write your code to plot/visualize the image
+
+
+```
+What do you see? Congratulations you have successfully made a kernel operation!
+
+*Exercise 2* <br>
+How about you try another kernel? What does the following kernel do?<br>
+0  -1  0 <br>
+-1  5  -1 <br>
+0  -1  0 <br>
+
 
 ### Noise filtering
+Filtering of noise is important to obtain a clear image. A simple approach to filter the noise is by grey value thresholding. The opencv function is `cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU) `, here we set a limit and change the pixel value to a user defined value tyically to 1 or 0. However this thresholding may not be always suitable, hence we use other form of noise filtering as follows.
+
 #### Gaussian Filtering
+
+
+
+
 #### Median fileter
 #### FFT filtering
 
