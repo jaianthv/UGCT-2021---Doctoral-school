@@ -172,23 +172,31 @@ List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d8
 
 Fast Fourier transform is one of the important algorithm in image processing. Foruier transform of an image converts your image in a frequency space. One can make your image blurry by removing the high frequency signal and can make the image sharper by removing the low frequency signals. This approach can also be used to smooth and sharpen the image, however the use of FFT on images is broad.
 
+Let us follow the code below;
+
+```
+f = np.fft.fft2(img)
+fshift = np.fft.fftshift(f)
+magnitude_spectrum = 20*np.log(np.abs(fshift))
+
+
+
+
+```
 
 ### Edge detection
-#### Canny
-#### Other- Sobel and Laplacian
+Edge detection is needed as a part of image processing. Edge detection measures the region where there is a slope in the image. One of the edge detection method is canny edge detection method, the syntax is `cv.Canny(image,(1,1))`. The numbers represent a threshold value to detect the slope
+Other detection method include Sobel and Laplacian.
+
+[1] Canny, J., 1986. A computational approach to edge detection. IEEE Transactions on pattern analysis and machine intelligence, (6), pp.679-698.
 
 
-### Erosion/dilation
-
-
-
-### Image registration 
-#### Hyperspy 
 
 ### Segmentation
 
 #### Grey value thresholding
 #### Contour based
+
 
 
 
@@ -241,7 +249,7 @@ def seperate_regions(input_image, I_min, I_max, show_img):
 Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
-
+### Erosion/dilation
 
 ## Introduction to Porespy
 Porespy is one of the python module used for pore analysis. It has one of the active repository and have many functions suitable for analyzing pores data. During this course we use it to analyze the local thickness of the tomography images.
@@ -256,6 +264,8 @@ Porespy is one of the python module used for pore analysis. It has one of the ac
 
 
 ### looping over a folder
+### Image registration 
+#### Hyperspy 
 
 
 
