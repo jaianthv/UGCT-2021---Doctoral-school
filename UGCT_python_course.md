@@ -194,8 +194,6 @@ Other detection method include Sobel and Laplacian.
 
 ### Segmentation
 
-#### Grey value thresholding
-#### Contour based
 
 
 
@@ -204,7 +202,9 @@ Other detection method include Sobel and Laplacian.
 
 
 
-### Grey value thresholding 
+
+
+#### Grey value thresholding 
 Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
 
 ```
@@ -248,6 +248,12 @@ def seperate_regions(input_image, I_min, I_max, show_img):
 *Exercise 2* <br>
 Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
+
+
+#### Contour based
+
+
+
 
 ### Erosion/dilation
 
