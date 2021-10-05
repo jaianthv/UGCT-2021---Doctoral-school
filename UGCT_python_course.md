@@ -144,10 +144,17 @@ How about you try another kernel? What does the following kernel do?<br>
 
 
 ### Noise filtering
-Filtering of noise is important to obtain a clear image. A simple approach to filter the noise is by grey value thresholding. The opencv function is `cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU) `, here we set a limit and change the pixel value to a user defined value tyically to 1 or 0. However this thresholding may not be always suitable, hence we use other form of noise filtering as follows.
+Filtering of noise is important to obtain a clear image. A simple approach to filter the noise is by grey value thresholding. The opencv function is `cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU) `, here we set a limit and change the pixel value to a user defined value tyically as a binary image to 1 or 0. However this thresholding may not be always suitable, hence we use other form of noise filtering as follows.
 
 #### Gaussian Filtering
 
+Also known as Gaussian blur, approxiate each pixel into a Gaussian function. It typically make the image blurr, but at the same time reduce the noice in some cases. It is also carried out by kernel operation and the Gaussian blur kernel is given as follows;<br>
+
+1/16  1/8  1/16 <br>
+1/8  1/4  1/8 <br>
+1/16  1/8  1/16 <br>
+
+One can carry out the Gaussian blur using `cv.filter2D` function as carried out before. However opencv has a seperate Gaussian blur function as `cv.gaussianblur`
 
 
 
