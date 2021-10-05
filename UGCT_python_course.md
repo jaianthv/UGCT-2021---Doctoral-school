@@ -111,10 +111,11 @@ Kernel operation is nothing but carrying out elementwise matrix mutiplication or
 Covolution = [[a,b,c] [d,e,f] [g,h,i]] (x) [[1,2,3] [4,5,6] [7,8,9]] = a.1 + b.2 + c.3 + d.4 + e.5 + f.6 + g.7 + h.8
 
 For example you can define a kernel as a 3 x 3 matrix such as; <br>
-
-0  -1  0 <br>
--1  4  -1 <br>
-0  -1  0 <br>
+```
+0  -1  0 
+-1  4  -1 
+0  -1  0 
+```
 
 and operate this on each pixel of your image, the output of operation is your processed image. Let use see what this kernel can do.
 
@@ -138,9 +139,11 @@ What do you see? Congratulations you have successfully made a kernel operation!
 
 *Exercise 2* <br>
 How about you try another kernel? What does the following kernel do?<br>
-0  -1  0 <br>
--1  5  -1 <br>
-0  -1  0 <br>
+```
+0  -1  0 
+-1  5  -1 
+0  -1  0 
+```
 
 
 ### Noise filtering
@@ -149,12 +152,15 @@ Filtering of noise is important to obtain a clear image. A simple approach to fi
 #### Gaussian Filtering
 
 Also known as Gaussian blur, approxiate each pixel into a Gaussian function. It typically make the image blurr, but at the same time reduce the noice in some cases. It is also carried out by kernel operation and the Gaussian blur kernel is given as follows;<br>
+```
+1/16  1/8  1/16 
+1/8  1/4  1/8 
+1/16  1/8  1/16 
+```
 
-1/16  1/8  1/16 <br>
-1/8  1/4  1/8 <br>
-1/16  1/8  1/16 <br>
+One can carry out the Gaussian blur using `cv.filter2D` function as carried out before. However opencv has a seperate Gaussian blur function as `cv.gaussianblur`. The syntax is given as `cv.GaussianBlur(image_name, (i, i), 0)` where "i,i" is the kernel size if it is a 3 x 3 matrix or 5 x 5 matrix and so on. Let us see what the Gaussian blur can do.
 
-One can carry out the Gaussian blur using `cv.filter2D` function as carried out before. However opencv has a seperate Gaussian blur function as `cv.gaussianblur`
+
 
 
 
