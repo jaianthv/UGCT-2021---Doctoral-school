@@ -289,7 +289,7 @@ binary_image = cv.dilate(image,kernel,iterations=1)
 ```
 
 #### Contour based
-
+Contour based segmentation is useful when you have to segment particular objectes from the image. The object can be separated based on the surface area, shape for example. Let us see how it works.
 ```
 contours,_ = cv.findContours(binary_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_TC89_L1)
 
@@ -320,11 +320,12 @@ Could you seperate different objects from the image??
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
 
-
 ## Introduction to Porespy
 Porespy is one of the python module used for pore analysis. It has one of the active repository and have many functions suitable for analyzing pores data. During this course we use it to analyze the local thickness of the tomography images.
 
 ### Finding local thickness
+The local thickness can be computed by "Ray" or "Sphere" method, and porespy and many other local area/volume calculator uses sphere based approach. One can load the stack of images and store as a 3D array and the  
+
 
 [1] Hildebrand, T. and Rüegsegger, P., 1997. A new method for the model‐independent assessment of thickness in three‐dimensional images. Journal of microscopy, 185(1), pp.67-75.
 
