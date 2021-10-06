@@ -179,8 +179,12 @@ f = np.fft.fft2(img)
 fshift = np.fft.fftshift(f)
 magnitude_spectrum = 20*np.log(np.abs(fshift))
 
+mask = circle
 
-
+fshift = dft_shift*mask
+f_ishift = np.fft.ifftshift(fshift)
+img_back = cv2.idft(f_ishift)
+img_back = cv2.magnitude(img_back[:,:,0],img_back[:,:,1])
 
 ```
 
@@ -193,16 +197,6 @@ Other detection method include Sobel and Laplacian.
 
 
 ### Segmentation
-
-
-
-
-
-
-
-
-
-
 
 #### Grey value thresholding 
 Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
@@ -220,7 +214,6 @@ else
 
 ```
 Imagine you have a pixel range of 0 - 100, and you want to separate or segment the pixels from 50 - 75, then this function cannot be used. There might be other possibilities but let us do it in the hard way. Let us write this operation as a python function.
-
 
 ```
 def seperate_regions(input_image, I_min, I_max, show_img):
@@ -247,13 +240,23 @@ def seperate_regions(input_image, I_min, I_max, show_img):
 ```
 *Exercise 2* <br>
 Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
-Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
+
 
 
 #### Contour based
 
 
+```
+contours,_ = cv.findContours(binary_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_TC89_L1)
 
+cv.drawContours(binary_image,contours,-1,(0,255,0),3)
+
+```
+
+
+
+
+Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
 ### Erosion/dilation
 
