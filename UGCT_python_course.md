@@ -340,11 +340,11 @@ thickness_image = ps.filters.local_thickness(image)
 ```
 os.chdir("C:/Users/jaianth/Desktop/unwrapped")
 path_name = "Unwrapped_%s.tiff"%image_number
-cv.imwrite(path_name,np.array(Reordered).transpose())
+cv.imwrite(path_name,image_array)
 ```
 
 ### looping over a folder
-
+How to we do the same process for a stack of images?
 ```
 folder="H:/Batch_1_07_2020/EEG002_X overview/reconstructed/Processed/"
 os.chdir("H:/Batch_1_07_2020/EEG002_X overview/reconstructed/Processed/")
