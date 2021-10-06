@@ -285,13 +285,31 @@ Copy the function in your python script and you need to write one more line in o
 
 
 ```
+
 contours,_ = cv.findContours(binary_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_TC89_L1)
 
 cv.drawContours(binary_image,contours,-1,(0,255,0),3)
 
+plt.matshow(binary_image)
+plt.show()
+
+## let us remove some regions of the contour
+
+select_list = []
+
+cv.drawContours(binary_image,contours[select_list],0,(0,255,0),3)
+plt.matshow(binary_image)
+M = cv.moments(contours[select_list])
+cx = (M["m10"] / M["m00"])
+cy = (M["m01"] / M["m00"])
+center_coordinates = (int(cx), int(cy)) 
+flood_fill = cv.floodFill(binary_image,None,(cx,cy),0)
+plt.matshow(flood_fill[1])
+plt.show()
+
 ```
 
-
+Could you seperate different objects from the image??
 
 
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
