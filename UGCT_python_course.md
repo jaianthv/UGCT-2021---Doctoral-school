@@ -279,13 +279,18 @@ def seperate_regions(input_image, I_min, I_max, show_img):
 *Exercise 2* <br>
 Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
 
+#### Erosion/dilation
+Before we go to the contour based segmentation it is important to know one more function, which the dilation and erosion of the image objects. From the word, the dilation function dilate the object, i.e. a thin line can be made thicker. The opposite of dilate is erosion where a thicker line is made thinner. In image processing you might use dilation more than erosion. Just like other function, dilation also works by kernel operation. The kernel determine by how many pixels a given pixel must dilate. A nice description of different morphological changing functions along with examples can be found [here](https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html).
 
+```
+kernel = np.ones((i,i),np.uint8)
+binary_image = cv.dilate(image,kernel,iterations=1)
+#erosion = cv.erode(image,kernel,iterations = 1)
+```
 
 #### Contour based
 
-
 ```
-
 contours,_ = cv.findContours(binary_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_TC89_L1)
 
 cv.drawContours(binary_image,contours,-1,(0,255,0),3)
@@ -314,7 +319,7 @@ Could you seperate different objects from the image??
 
 Now we have segmented the image. Let us do a quick analysis using one of the porespy function to calculate the local thickness.
 
-### Erosion/dilation
+
 
 ## Introduction to Porespy
 Porespy is one of the python module used for pore analysis. It has one of the active repository and have many functions suitable for analyzing pores data. During this course we use it to analyze the local thickness of the tomography images.
