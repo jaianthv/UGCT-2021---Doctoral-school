@@ -368,6 +368,8 @@ for i in range(len(List_of_files)-1):
 
 ## Exercise 1: Choose your data set
 
+Now let us segment a full stack of image. Once successful we will do a 3D rendering. 
+
 ## Rendering to 3D image
 ### VTK file
 ### VTK file description
