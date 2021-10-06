@@ -172,28 +172,66 @@ List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d8
 
 Fast Fourier transform is one of the important algorithm in image processing. Foruier transform of an image converts your image in a frequency space. One can make your image blurry by removing the high frequency signal and can make the image sharper by removing the low frequency signals. This approach can also be used to smooth and sharpen the image, however the use of FFT on images is broad.
 
-Let us follow the code below;
+Let us follow the code below, it taken from [here](https://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_Image_Fourier_Transform_FFT_DFT.php);
 
 ```
-f = np.fft.fft2(img)
-fshift = np.fft.fftshift(f)
-magnitude_spectrum = 20*np.log(np.abs(fshift))
+image_float = np.float32(image)
 
-mask = circle
+dft = cv2.dft(image_float32, flags = cv.DFT_COMPLEX_OUTPUT)
+dft_shift = np.fft.fftshift(dft)
+magnitude_spectrum = 20*np.log(cv2.magnitude(dft_shift[:,:,0],dft_shift[:,:,1]))
 
+plt.subplot(121),plt.imshow(image, cmap = 'gray')
+plt.title('Input Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(magnitude_spectrum, cmap = 'gray')
+plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
+plt.show()  
+
+
+shape_img = np.shape(image)
+for_crop = image.copy()
+for_crop = for_crop * 0
+
+center_coordinates = (int(shape_img[0]/2), int(shape_img[1]/2)) 
+radius = 20
+color = (10, 10, 0) 
+thickness = 1
+image = cv.circle(image, center_coordinates, radius, color, thickness)
+flood_fill = cv.floodFill(binary_image,None,(cx,cy),1)
+flood_fill_image = flood_fill[1]
+
+plt.matshow(flood_fill_image)
+plt.show()
+
+mask = flood_fill_image
 fshift = dft_shift*mask
 f_ishift = np.fft.ifftshift(fshift)
-img_back = cv2.idft(f_ishift)
-img_back = cv2.magnitude(img_back[:,:,0],img_back[:,:,1])
+image_back = cv.idft(f_ishift)
+image_back = cv.magnitude(img_back[:,:,0],img_back[:,:,1])
 
+
+plt.subplot(121),plt.imshow(img, cmap = 'gray')
+plt.title('Input Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(img_back, cmap = 'gray')
+plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
+
+plt.show()  
 ```
 
 ### Edge detection
-Edge detection is needed as a part of image processing. Edge detection measures the region where there is a slope in the image. One of the edge detection method is canny edge detection method, the syntax is `cv.Canny(image,(1,1))`. The numbers represent a threshold value to detect the slope
+Edge detection is needed as a part of image processing. Edge detection measures the region where there is a slope in the image. One of the edge detection method is canny edge detection method, the syntax is `cv.Canny(image,1,1)`. The numbers represent a threshold value to detect the slope
 Other detection method include Sobel and Laplacian.
 
-[1] Canny, J., 1986. A computational approach to edge detection. IEEE Transactions on pattern analysis and machine intelligence, (6), pp.679-698.
+Let us see which threshold works.
 
+```
+Edge_iamge = cv.Canny(image,i,i) # --> change i and see what happens
+plt.matshow(Edge_image)
+plt.show()
+
+```
+
+[1] Canny, J., 1986. A computational approach to edge detection. IEEE Transactions on pattern analysis and machine intelligence, (6), pp.679-698.
 
 
 ### Segmentation
@@ -202,7 +240,7 @@ Other detection method include Sobel and Laplacian.
 Grey value thresholding is one of the simplest segmentation techniques, where select the range of pixels to be displayed and discard the remaning regions. One way to carry out the grey value thresholding is by using the function from the opencv, i.e. `cv.threshold`, some examples on different types and implementation can be found here [example](https://learnopencv.com/opencv-threshold-python-cpp/). A typical example can be seen below;
 
 ```
-cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU)
+cv.threshold(image,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU)
 
 ```
 This code typically functions as the following <br>
