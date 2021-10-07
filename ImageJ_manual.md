@@ -7,3 +7,33 @@ Go to this [link](https://imagej.net/software/fiji/). Dowload the .zip file, ext
 Now you are ready with everything needed for this course. In case you had any trouble during the installation, you ask the person in charge of the course or better ask google :) 
 
 ## Image processing 
+
+### Load/open an image
+1. File - open - select your image
+2. Drag and drop
+
+### Kernel operation
+
+Process - Filters - convolve
+Inside enter your kernel matrix
+
+### Noise Filtering
+Process - Filters -
+
+### FFT filtering
+
+### Edge detection
+
+### Grey value thresholding
+
+### Dilation/Erosion
+
+
+### Contour based segmentation
+
+### Find local thickness
+
+### operating on image stack
+
+
+### Rendering 3D image
