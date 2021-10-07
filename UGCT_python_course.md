@@ -435,6 +435,11 @@ LOOKUP_TABLE default
 15.0   
 16.0   
 17.0
+
+VECTORS vectors float
+1 0 0 
+1 1 0 
+...
 ```
 
 ### python script to create VTK file
