@@ -378,6 +378,65 @@ The description of the vtk file can be found in this [link](https://vtk.org/wp-c
 
 ```
 # Example of vtk file
+# vtk DataFile Version 2.0
+Unstructured Grig EXAMPLE
+ASCII
+DATASET UNSTRUCTURED_GRID
+POINTS 18 float
+1 5 0
+2 5 0
+3 5 0
+4 5 0
+4 4 0
+3 4 0
+3 3 0
+3 2 0
+3 1 0
+3 0 0 
+2 0 0 
+1 0 0 
+1 1 0
+2 1 0
+2 2 0
+2 3 0
+2 4 0
+1 4 0
+
+CELLS 3 26
+8 0 1 2 3 4 5 16 17
+9 16 5 6 7 8 9 13 14 15 
+6 8 9 10 11 12 13
+
+CELL_TYPES 3
+7
+7
+7
+
+
+POINT_DATA 18
+SCALARS scalars float 1
+LOOKUP_TABLE default
+
+1.0   
+1.0   
+2.0   
+3.0   
+4.0   
+5.0
+6.0   
+7.0   
+8.0   
+9.0   
+10.0   
+11.0
+12.0   
+13.0   
+14.0   
+15.0   
+16.0   
+17.0
+  
+
 
 
 ```
