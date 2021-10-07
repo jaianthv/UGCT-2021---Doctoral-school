@@ -435,11 +435,8 @@ LOOKUP_TABLE default
 15.0   
 16.0   
 17.0
-  
-
-
-
 ```
 
-### VTK file description
 ### python script to create VTK file
+
+
