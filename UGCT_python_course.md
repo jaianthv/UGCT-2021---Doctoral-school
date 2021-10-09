@@ -76,16 +76,10 @@ filename = "xxx.tif"
 image = cv.imread(filename,-1)
 print ("Image successfully read")
 ```
+
 After this, press ctrl+s to save, give a name to your file. By default it will save as .py as ending. So you can just give a name here. Once saved, press F5 to run the script. Or you can go to "Run" on the top and press "Run Module". Was the script executed without any error, did the program print "Image successfully read"?? Then all is good.
 
 
-<font color="blue">  
-
-
-### Load/open an image
-1. File - open - select your image
-2. Drag and drop
-</font>
 
 
 ### Open image in python
@@ -113,6 +107,14 @@ Then run the script, how does the image appear?? Here you can zoom in place the 
 *Exercise 1* <br>
 While loading the image you used the syntax `cv.imread(filename,-1)` what does the "-1" corresponds to? How about you try entering "0" and "1" and how does the image change? Can you use any other value?? Don't google your answer immediately :) <br>
 Alright, let us do some operation on the image. 
+
+
+
+
+>###ImageJ 
+>### Load/open an image
+>1. File - open - select your image
+>2. Drag and drop
 
 
 ### Kernel operation
@@ -154,6 +156,11 @@ How about you try another kernel? What does the following kernel do?<br>
 -1  5  -1 
 0  -1  0 
 ```
+
+>###ImageJ 
+>### Kernel operation of an image
+>Process - Filters - convolve
+>Inside enter your kernel matrix
 
 
 ### Noise filtering
