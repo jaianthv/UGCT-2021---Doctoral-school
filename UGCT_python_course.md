@@ -78,6 +78,16 @@ print ("Image successfully read")
 ```
 After this, press ctrl+s to save, give a name to your file. By default it will save as .py as ending. So you can just give a name here. Once saved, press F5 to run the script. Or you can go to "Run" on the top and press "Run Module". Was the script executed without any error, did the program print "Image successfully read"?? Then all is good.
 
+
+<font color="blue">  
+
+
+### Load/open an image
+1. File - open - select your image
+2. Drag and drop
+</font>
+
+
 ### Open image in python
 Your image is loaded in the script, now let us take a look at it. There are two ways you can view your image let us try first by using opencv function. In the same program. start a new line. Write the following.
 
