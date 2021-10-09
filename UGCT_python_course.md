@@ -111,8 +111,8 @@ Alright, let us do some operation on the image.
 
 
 
->###ImageJ 
->### Load/open an image
+> ###ImageJ 
+> ### Load/open an image
 >1. File - open - select your image
 >2. Drag and drop
 
@@ -157,8 +157,8 @@ How about you try another kernel? What does the following kernel do?<br>
 0  -1  0 
 ```
 
->###ImageJ 
->### Kernel operation of an image
+> ###ImageJ 
+> ### Kernel operation of an image
 >Process - Filters - convolve
 >Inside enter your kernel matrix
 
