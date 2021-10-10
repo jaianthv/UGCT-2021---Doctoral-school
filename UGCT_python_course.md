@@ -111,7 +111,7 @@ Alright, let us do some operation on the image.
 
 
 
-> ###ImageJ 
+> #### ImageJ 
 > ### Load/open an image
 >1. File - open - select your image
 >2. Drag and drop
@@ -157,7 +157,7 @@ How about you try another kernel? What does the following kernel do?<br>
 0  -1  0 
 ```
 
-> ###ImageJ 
+> #### ImageJ 
 > ### Kernel operation of an image
 >Process - Filters - convolve
 >Inside enter your kernel matrix
@@ -165,6 +165,8 @@ How about you try another kernel? What does the following kernel do?<br>
 
 ### Noise filtering
 Filtering of noise is important to obtain a clear image. A simple approach to filter the noise is by grey value thresholding. The opencv function is `cv.threshold(Inner_layer,Limit,set_to_value,cv.THRESH_BINARY+cv.THRESH_OTSU) `, here we set a limit and change the pixel value to a user defined value tyically as a binary image to 1 or 0. However this thresholding may not be always suitable, hence we use other form of noise filtering as follows.
+
+
 
 #### Gaussian Filtering
 
@@ -182,6 +184,10 @@ One can carry out the Gaussian blur using `cv.filter2D` function as carried out 
 How about we try doing gaussian blur with 3x3, 5x5 and 10x10 kernel?? What to do you see?<br>
 
 List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d86/group__imgproc__filter.html)
+
+> #### ImageJ 
+> ### Noise filtering of an image
+>Process - Filters - choose any
 
 
 
