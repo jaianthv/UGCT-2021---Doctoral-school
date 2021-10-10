@@ -111,7 +111,7 @@ Alright, let us do some operation on the image.
 
 
 
-> #### ImageJ 
+> ## *ImageJ* 
 > ### Load/open an image
 >1. File - open - select your image
 >2. Drag and drop
@@ -157,7 +157,7 @@ How about you try another kernel? What does the following kernel do?<br>
 0  -1  0 
 ```
 
-> #### ImageJ 
+> ## *ImageJ* 
 > ### Kernel operation of an image
 >Process - Filters - convolve
 >Inside enter your kernel matrix
@@ -185,7 +185,7 @@ How about we try doing gaussian blur with 3x3, 5x5 and 10x10 kernel?? What to do
 
 List of other filters can be found in [link](https://docs.opencv.org/4.5.3/d4/d86/group__imgproc__filter.html)
 
-> #### ImageJ 
+> ## *ImageJ* 
 > ### Noise filtering of an image
 >Process - Filters - choose any
 
@@ -240,6 +240,11 @@ plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
 
 plt.show()  
 ```
+
+
+> ## *ImageJ* 
+> ### FFT filtering of an image
+>Process - Filters - FFT
 
 ### Edge detection
 Edge detection is needed as a part of image processing. Edge detection measures the region where there is a slope in the image. One of the edge detection method is canny edge detection method, the syntax is `cv.Canny(image,1,1)`. The numbers represent a threshold value to detect the slope
