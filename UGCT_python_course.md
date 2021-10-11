@@ -259,6 +259,12 @@ plt.show()
 
 ```
 
+
+> ## *ImageJ* 
+> ### Edge detectio in the image
+>Process - Find edges
+
+
 [1] Canny, J., 1986. A computational approach to edge detection. IEEE Transactions on pattern analysis and machine intelligence, (6), pp.679-698.
 
 
@@ -304,8 +310,14 @@ def seperate_regions(input_image, I_min, I_max, show_img):
        
     return temp
 ```
+
 *Exercise 2* <br>
 Copy the function in your python script and you need to write one more line in order to execute this function. Are you able to get the segmented image?<br>
+
+
+> ## *ImageJ* 
+> ### Grey value thresholding
+> Image - Adjust - Threshold
 
 #### Erosion/dilation
 Before we go to the contour based segmentation it is important to know one more function, which the dilation and erosion of the image objects. From the word, the dilation function dilate the object, i.e. a thin line can be made thicker. The opposite of dilate is erosion where a thicker line is made thinner. In image processing you might use dilation more than erosion. Just like other function, dilation also works by kernel operation. The kernel determine by how many pixels a given pixel must dilate. A nice description of different morphological changing functions along with examples can be found [here](https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html).
