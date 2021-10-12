@@ -24,7 +24,7 @@ Go to command prompt in your windows system. Then type the following one at a ti
 2. pip install numpy          - press enter ---> wait until the installation is complete, then go to the next point
 3. pip install os             - press enter ---> wait
 4. pip install sys            - press enter ---> wait
-5. pip install cv2            - press enter ---> wait
+5. pip install opencv-python           - press enter ---> wait
 6. pip install porespy        - press enter ---> wait
 
 Phew!!! Finally it is done but still some more to install. A description of each module and its purpose will be explained after all the installations are over.
