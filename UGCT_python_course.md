@@ -117,6 +117,63 @@ Alright, let us do some operation on the image.
 >2. Drag and drop
 
 
+
+### Image histogram
+
+
+
+'''
+def plot_histogram(masked_img):
+    cv.imshow("sdf",masked_img)
+    cv.waitKey(0)
+    cv.destroyAllWindows()
+    Z = masked_img.reshape((-1,1))
+    print (Z)
+    #np.hist
+    x = (cv.findNonZero(masked_img))
+    x = np.array(x)
+
+    #print (len(x[1]))
+    #print (x[0][0][1])
+       
+    Non_zero=[];
+    for i in range(0,len(x)):
+        coordinate = x[i]
+        coordinate_x = coordinate[0][0]
+        coordinate_y = coordinate[0][1]
+        Non_zero.append(masked_img[coordinate_y][coordinate_x])  ### x and y are exchanged
+        #print (masked_img[coordinate_y][coordinate_x])
+    #print (Non_zero)
+    min_non_zero = np.amin(Non_zero)
+    #print (min_non_zero)
+    max_non_zero = np.amax(Non_zero)
+
+    A =[]
+    for i in range(min_non_zero,max_non_zero,10):
+    
+        A.append(i)
+        
+    plt.hist(Z, bins = A) 
+    #plt.title("histogram")
+    plt.yscale("log")
+    plt.xscale("linear")
+    plt.xlabel("Intensity (a.u.)", fontsize = 15)
+    plt.ylabel("Counts", fontsize = 15)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    
+    plt.show()
+
+    return min_non_zero, max_non_zero, x
+
+'''
+> ## *ImageJ* 
+> ### Kernel operation of an image
+> Analyze - Histogram
+
+
+
+
 ### Kernel operation
 
 Kernel operation is nothing but carrying out elementwise matrix mutiplication or convolution on your image pixels. <br>
