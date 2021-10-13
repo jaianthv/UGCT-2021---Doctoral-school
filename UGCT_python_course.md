@@ -552,7 +552,6 @@ VECTORS vectors float
 1 1 0 
 1 0 0 
 1 1 0 
-...
 ```
 
 ### python script to create VTK file
