@@ -122,7 +122,8 @@ Alright, let us do some operation on the image.
 
 
 
-'''
+```
+
 def plot_histogram(masked_img):
     cv.imshow("sdf",masked_img)
     cv.waitKey(0)
@@ -132,7 +133,6 @@ def plot_histogram(masked_img):
     #np.hist
     x = (cv.findNonZero(masked_img))
     x = np.array(x)
-
     #print (len(x[1]))
     #print (x[0][0][1])
        
@@ -166,12 +166,13 @@ def plot_histogram(masked_img):
 
     return min_non_zero, max_non_zero, x
 
-'''
+```
+```
 > ## *ImageJ* 
 > ### Kernel operation of an image
 > Analyze - Histogram
 
-
+```
 
 
 ### Kernel operation
