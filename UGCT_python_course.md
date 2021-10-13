@@ -591,6 +591,8 @@ VECTORS vectors float
 1 1 0 
 ```
 
-### python script to create VTK file
+### python script 
+
+Link is [here](https://github.com/jaianthv/UGCT-2021---Doctoral-school/tree/main/python_scripts)
 
 
