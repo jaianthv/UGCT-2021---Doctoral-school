@@ -258,9 +258,9 @@ Let us follow the code below, it taken from [here](https://www.bogotobogo.com/py
 ```
 image_float = np.float32(image)
 
-dft = cv2.dft(image_float32, flags = cv.DFT_COMPLEX_OUTPUT)
+dft = cv.dft(image_float, flags = cv.DFT_COMPLEX_OUTPUT)
 dft_shift = np.fft.fftshift(dft)
-magnitude_spectrum = 20*np.log(cv2.magnitude(dft_shift[:,:,0],dft_shift[:,:,1]))
+magnitude_spectrum = 20*np.log(cv.magnitude(dft_shift[:,:,0],dft_shift[:,:,1]))
 
 plt.subplot(121),plt.imshow(image, cmap = 'gray')
 plt.title('Input Image'), plt.xticks([]), plt.yticks([])
