@@ -20,7 +20,7 @@ The list of modules needed for our course are listed below;
 
 Go to command prompt in your windows system. Then type the following one at a time;
 
-1. pip install matplotlib.py  - press enter ---> wait until the installation is complete, then go to the next point 
+1. pip install matplotlib  - press enter ---> wait until the installation is complete, then go to the next point 
 2. pip install numpy          - press enter ---> wait until the installation is complete, then go to the next point
 3. pip install os             - press enter ---> wait
 4. pip install sys            - press enter ---> wait
