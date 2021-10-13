@@ -475,7 +475,6 @@ There are many options to visualize a 3D image in python, many libraries in [pan
 The description of the vtk file can be found in this [link](https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf). 
 
 ```
-# Example of vtk file
 # vtk DataFile Version 2.0
 Unstructured Grig EXAMPLE
 ASCII
@@ -535,6 +534,22 @@ LOOKUP_TABLE default
 17.0
 
 VECTORS vectors float
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
+1 0 0 
+1 1 0 
 1 0 0 
 1 1 0 
 ...
