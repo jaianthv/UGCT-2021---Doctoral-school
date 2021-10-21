@@ -153,19 +153,22 @@ def multiprocess_thickness_calculator(**args):
         save_image = "yes"
         if Values[save_image_index] == "yes":
             os.chdir(Values[folder_index])
-            os.mkdir("Processed_thickness")
+            #os.mkdir("Processed_thickness")
     else:
         save_image = "No"
 
     if "overlap" in Keys:
-        overlap_no = int(Keys.index("overlap"))
+        overlap_no_index = int(Keys.index("overlap"))
+        overlap_np = int(Values[overlap_no_index])
 
     else:
         overlap_no = 5
         
 
     if "split_images" in Keys:
-        split_image_no = int(Keys.index("split_images"))
+        split_image_no_index = int(Keys.index("split_images"))
+        split_image_no = int(Values[split_image_no_index])
+        
 
 
     else:
@@ -295,8 +298,8 @@ def plot_thickness_data(folder):
 
             
 def create_split_array(len_of_files,overlap,split_files):
-    #Divide = len_of_files/split_files #200
-    Divide = split_files
+    Divide = len_of_files/split_files #200
+    #Divide = split_files
     overlap =int(overlap)
     Nos=np.linspace(0,len_of_files-1,len_of_files)
     
@@ -401,7 +404,7 @@ data = multiprocess_thickness_calculator(folder="C:/UGCT_doctoral_course/Codes/s
 os.chdir("C:/UGCT_doctoral_course/Codes/sequence/Threshold/")
 sort_sequence()
 
-plot_thickness_data("C:/UGCT_doctoral_course/Codes/sequence/Threshold/")
+#plot_thickness_data("C:/UGCT_doctoral_course/Codes/sequence/Threshold/")
 
 
 
