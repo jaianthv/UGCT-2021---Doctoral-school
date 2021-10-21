@@ -105,18 +105,21 @@ def get_thickness(ND_array,resolution):
         temp_image = ND_array[i]
         x = np.array(x)
         avg_temp =[]
-        for ii in range(0,len(x)):
-            coordinate = x[ii]
-            coordinate_x = int(coordinate[0][1])  #change in coordinate
-            coordinate_y = int(coordinate[0][0])  #change in coordinate
-            avg_temp.append((temp_image[coordinate_x][coordinate_y])*resolution)
+
+        if len(x) != 0:
+            
+            for ii in range(0,len(x)):
+                coordinate = x[ii]
+                coordinate_x = int(coordinate[0][1])  #change in coordinate
+                coordinate_y = int(coordinate[0][0])  #change in coordinate
+                avg_temp.append((temp_image[coordinate_x][coordinate_y])*resolution)
                     
-        avg=np.mean(avg_temp)
-        std=np.std(avg_temp)
+            avg=np.mean(avg_temp)
+            std=np.std(avg_temp)
         
         
-        data.append(avg)
-        data_std.append(std)
+            data.append(avg)
+            data_std.append(std)
         
         
     return pos,data,data_std
